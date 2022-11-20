@@ -11,3 +11,5 @@ systemctl --user start container-mailu_*
 systemctl --user enable container-mailu_*
 
 podman exec mailu_admin_1 flask mailu admin admin domain.com PASSWORD
+
+podman  images --format "{{.Repository}}:{{.Tag}}"  | xargs -L1 podman pull
