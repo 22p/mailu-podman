@@ -4,6 +4,8 @@ cd ~/.config/systemd/user/
 
 
 
+podman network create --subnet 192.168.203.0/24 mailu_default
+
 systemctl --user start container-mailu_*
 
 systemctl --user enable container-mailu_*
